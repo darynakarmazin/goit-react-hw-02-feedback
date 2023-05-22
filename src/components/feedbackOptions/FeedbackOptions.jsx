@@ -1,23 +1,24 @@
 import React, { Component } from 'react';
+import { Buttons, Button } from './FeedbackOptions.styled';
 
 export class FeedbackOptions extends Component {
   render() {
     return (
-      <>
-        <button type="button" name="good" onClick={this.props.onLeaveFeedback}>
+      <Buttons>
+        <Button type="button" name="good" onClick={this.props.onLeaveFeedback}>
           Good
-        </button>
-        <button
+        </Button>
+        <Button
           type="button"
           name="neutral"
           onClick={this.props.onLeaveFeedback}
         >
           Neutral
-        </button>
-        <button type="button" name="bad" onClick={this.props.onLeaveFeedback}>
+        </Button>
+        <Button type="button" name="bad" onClick={this.props.onLeaveFeedback}>
           Bad
-        </button>
-      </>
+        </Button>
+      </Buttons>
     );
   }
 }

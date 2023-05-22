@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+
+import { Wrapper } from './App.styled';
+
 import { Statistics } from 'components/statistics/Statistics';
 import { FeedbackOptions } from 'components/feedbackOptions/FeedbackOptions';
 import { Section } from 'components/section/Section';
@@ -32,7 +35,7 @@ export class App extends Component {
 
   render() {
     return (
-      <>
+      <Wrapper>
         <Section title="Please leave feed back">
           <FeedbackOptions
             onLeaveFeedback={this.handleIncrement}
@@ -51,7 +54,7 @@ export class App extends Component {
         ) : (
           <Notification message="There is no feedback"></Notification>
         )}
-      </>
+      </Wrapper>
     );
   }
 }

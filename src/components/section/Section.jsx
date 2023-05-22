@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
+import { Title, SectionDiv } from 'components/section/Section.styled';
 
 export class Section extends Component {
   render() {
     return (
-      <div>
-        <p>{this.props.title}</p>
+      <SectionDiv>
+        <Title>{this.props.title}</Title>
         {this.props.children}
-      </div>
+      </SectionDiv>
     );
   }
 }

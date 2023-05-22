@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import { Message } from './Notification.styled';
 
 export class Notification extends Component {
   render() {
     return (
-      <div>
-        <p>{this.props.message}</p>
-      </div>
+      <>
+        <Message>{this.props.message}</Message>
+      </>
     );
   }
 }
