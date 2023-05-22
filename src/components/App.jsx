@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 export class App extends Component {
   state = {
-    good: 3,
-    neutral: 2,
-    bad: 2,
+    good: 0,
+    neutral: 0,
+    bad: 0,
   };
 
   countTotalFeedback = () => {
@@ -21,6 +21,9 @@ export class App extends Component {
 
   handleIncrement = event => {
     event.preventDefault();
+    this.setState((prevState) => {
+      return { [event.target.name]: prevState[event.target.name] + 1 };
+    })
   };
 
   render() {
@@ -28,13 +31,13 @@ export class App extends Component {
       <div>
         <div>
           <p>Please leave feed back</p>
-          <button type="button" onClick={this.handleIncrement}>
+          <button type="button" name="good" onClick={this.handleIncrement}>
             Good
           </button>
-          <button type="button" onClick={this.handleIncrement}>
+          <button type="button" name="neutral" onClick={this.handleIncrement}>
             Neutral
           </button>
-          <button type="button" onClick={this.handleIncrement}>
+          <button type="button" name="bad" onClick={this.handleIncrement}>
             Bad
           </button>
         </div>
