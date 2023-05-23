@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Title, SectionDiv } from 'components/section/Section.styled';
 
 export class Section extends Component {
@@ -11,3 +12,7 @@ export class Section extends Component {
     );
   }
 }
+
+Section.propTypes = {
+  title: PropTypes.string.isRequired,
+};

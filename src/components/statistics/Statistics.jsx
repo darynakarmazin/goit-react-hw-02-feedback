@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { List, Item } from './Statistics.styled';
 
 export class Statistics extends Component {
@@ -14,3 +15,9 @@ export class Statistics extends Component {
     );
   }
 }
+
+Statistics.propTypes = {
+  good: PropTypes.string.isRequired,
+  neutral: PropTypes.string.isRequired,
+  bad: PropTypes.string.isRequired,
+};
