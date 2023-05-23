@@ -5,19 +5,17 @@ export class FeedbackOptions extends Component {
   render() {
     return (
       <Buttons>
-        <Button type="button" name="good" onClick={this.props.onLeaveFeedback}>
-          Good
-        </Button>
-        <Button
-          type="button"
-          name="neutral"
-          onClick={this.props.onLeaveFeedback}
-        >
-          Neutral
-        </Button>
-        <Button type="button" name="bad" onClick={this.props.onLeaveFeedback}>
-          Bad
-        </Button>
+        {this.props.options.map(option => (
+          <li key={option}>
+            <Button
+              type="button"
+              name={option}
+              onClick={this.props.onLeaveFeedback}
+            >
+              {option}
+            </Button>
+          </li>
+        ))}
       </Buttons>
     );
   }
