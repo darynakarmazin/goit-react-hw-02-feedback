@@ -38,6 +38,7 @@ export class App extends Component {
       <Wrapper>
         <Section title="Please leave feed back">
           <FeedbackOptions
+            options={('good', 'neutral', 'bad')}
             onLeaveFeedback={this.handleIncrement}
           ></FeedbackOptions>
         </Section>
